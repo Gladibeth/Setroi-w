@@ -23,6 +23,10 @@
   }
 }
 
+.info-content{
+  width: 100%;
+}
+
 .info-grid{
   @include BoxShadow(1);
   display: grid;
@@ -41,20 +45,32 @@
 
   @include respond-to(xs){
     grid-template-columns: 100%;
-    margin: 0 20px 10px 20px;
+    margin: 30px 20px 10px 20px;
     gap: 0px;
   }
   @include respond-to(sm){
     grid-template-columns: 100%;
-    margin: 0 20px 10px 20px;
+    margin: 30px 20px 10px 20px;
     gap: 0px;
   }
 
+  @include respond-to(md){
+    margin: 40px 50px 20px 50px;
+    gap: 20px;
+  }
+
   .info-video{
-    height: 290px;
     border-radius: 40px;
     overflow: hidden;
     position: relative;
+    width: 100%;
+    
+    @include respond-to(xs){
+      height: 190px;
+    }
+    @include respond-to(sm){
+      height: 190px;
+    }
   
     video {
       position: relative;
@@ -94,16 +110,54 @@
   @include respond-to(sm){
     grid-template-columns: 100%;
   }
+  @include respond-to(md){
+    grid-template-columns: 100%;
+  }
+  
+}
 
-  .clients-imgs{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
+.clients-imgs{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+
+  @include respond-to(xs){
+    grid-template-columns: 100%;
+    margin-top: 30px;
+  }
+
+  @include respond-to(sm){
+    grid-template-columns: 100%;
+    margin-top: 30px;
+  }
+  @include respond-to(md){
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 50px;
+  }
+
+  @include respond-to(lg){
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  .clients-img{
 
     @include respond-to(xs){
-      grid-template-columns: 100%;
+      @include flexcenter();
+      margin-bottom: 20px;
+    }
+    @include respond-to(sm){
+      @include flexcenter();
+      margin-bottom: 20px;
+    }
+    @include respond-to(md){
+      @include flexcenter();
+      margin-bottom: 20px;
+    }
+    @include respond-to(lg){
+      @include flexcenter();
+      margin-bottom: 20px;
     }
 
-    .clients-img{
+    &-size {
       width: 200px;
 
       @include respond-to(xs){
@@ -113,11 +167,10 @@
         width: 280px;
       }
       @include respond-to(md){
-        width: 280px;
+        width: 310px;
       }
     }
   }
-  
 }
 
 
@@ -147,6 +200,10 @@
       margin-bottom: 0;
       font-size: 19px;
       font-weight: $bold;
+
+      @include respond-to(md){
+        font-size: 18px;
+      }
     }
   }
 }
@@ -181,8 +238,35 @@
     object-fit: cover;
     width: 100%;
     position: absolute;
-    left: -5%;
+    left: -3%;
   }
+  .main-buttons {
+    @include respond-to(md){
+      a{
+        width: 100%;
+        justify-content: center;
+        height: 45px;
+
+        &:nth-child(2){
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+    @include respond-to(lg){
+      a{
+        width: 100%;
+        justify-content: center;
+        height: 45px;
+
+        &:nth-child(2){
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
 }
 
 .main-methods {
@@ -197,6 +281,10 @@
     @include respond-to(sm){
        padding: 20px;
     }
+
+    @include respond-to(md){
+      padding: 20px 0;
+   }
     
     &-count{
       display: flex;
@@ -212,6 +300,10 @@
        transform: rotate(90deg);
        position: absolute;
        right: 25%;
+
+       @include respond-to(md){
+         right: 6%;
+       }
       }
     }
   }
@@ -224,9 +316,31 @@
 .result-img-content{
   @include size(460px,480px);
 
+  @include respond-to(xs){
+    @include size(400px,420px);
+    margin-top: 30px;
+  }
+
+  @include respond-to(sm){
+    @include size(460px,480px);
+    margin-top: 30px;
+  }
+
+  @include respond-to(md){
+    @include size(350px,360px);
+  }
+
   img{
     height: 100%;
     object-fit: contain;
+
+    @include respond-to(xs){
+      object-fit: initial;
+    }
+    @include respond-to(sm){
+      object-fit: initial;
+    }
+    
   }
 }
 

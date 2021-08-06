@@ -51,22 +51,24 @@
         Gana los primeros resultados en GOOGLE apareciendo en <span>más de 50 periódicos digitales</span> como noticia
       </h1>
   
-      <div class="info-grid">
-        <div class="info-video">
-          <video src="video.webm" poster="assets/img/SETROI_Video.png" controls></video>
-        </div>
-        <div class="info-form">
-          <form action="">
-            <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example">
-            <input class="form-control" type="tel" placeholder="Teléfono" aria-label="default input example">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label" for="flexCheckDefault">
-               <strong> He leido y acepto la <a href="">politica de privacidad</a></strong>
-              </label>
-            </div>
-            <a href="#" class="btn-custom large">Solicitar información</a>
-          </form>
+      <div class="info-content">
+        <div class="info-grid">
+          <div class="info-video">
+            <video class="main-video" src="assets/img/Recommendations/test.mp4" poster="assets/img/SETROI_Video.png"></video>
+          </div>
+          <div class="info-form">
+            <form action="">
+              <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example">
+              <input class="form-control" type="tel" placeholder="Teléfono" aria-label="default input example">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                 <strong> He leido y acepto la <a href="">politica de privacidad</a></strong>
+                </label>
+              </div>
+              <a href="#" class="btn-custom large">Solicitar información</a>
+            </form>
+          </div>
         </div>
       </div>
       <p class="vertical-padding">Aparece en prensa de forma garantizada por <strong>99€/mes <a href="#">sin permanencia</a></strong> , sin importar el tamaño de tu empresa o sector.</p>
@@ -76,40 +78,50 @@
     <section class="main-clients section-spacing">
       <div class="clients-grid">
         <div class="clients-info">
-          <h2 class="main-title main-title-small">
+          <h2 class="main-title main-title-small text-sm-start text-center">
             Más de 100 periódicos digitales
           </h2>
         </div>
         <div class="clients-imgs">
           <div class="clients-img">
-            <img class="img-fluid" src="assets/img/Clients/que@1x.png" 
-            srcset="assets/img/Clients/que@2x.png 2x, 
-                    assets/img/Clients/que@1x.png 1x" 
-            alt="">
+            <div class="clients-img-size">
+              <img class="img-fluid" src="assets/img/Clients/que@1x.png" 
+              srcset="assets/img/Clients/que@2x.png 2x, 
+                      assets/img/Clients/que@1x.png 1x" 
+              alt="">
+            </div>
           </div>
           <div class="clients-img">
-            <img class="img-fluid" src="assets/img/Clients/elmundofinanciero@1x.png" 
-            srcset="assets/img/Clients/elmundofinanciero@2x.png 2x, 
-                    assets/img/Clients/elmundofinanciero@1x.png 1x" 
-            alt="">
+            <div class="clients-img-size">
+              <img class="img-fluid" src="assets/img/Clients/elmundofinanciero@1x.png" 
+              srcset="assets/img/Clients/elmundofinanciero@2x.png 2x, 
+                      assets/img/Clients/elmundofinanciero@1x.png 1x" 
+              alt="">
+            </div>
           </div>
           <div class="clients-img">
-            <img class="img-fluid" src="assets/img/Clients/ecd-1@1x.png" 
-            srcset="assets/img/Clients/ecd-1@2x.png 2x, 
-                    assets/img/Clients/ecd-1@1x.png 1x" 
-            alt="">
+            <div class="clients-img-size">
+              <img class="img-fluid" src="assets/img/Clients/ecd-1@1x.png" 
+              srcset="assets/img/Clients/ecd-1@2x.png 2x, 
+                      assets/img/Clients/ecd-1@1x.png 1x" 
+              alt="">
+            </div>
           </div>
           <div class="clients-img">
-            <img class="img-fluid"   src="assets/img/Clients/moncloa@1x.png"
-            srcset="assets/img/Clients/moncloa@2x.png 2x, 
-                    assets/img/Clients/moncloa@1x.png 1x" 
-            alt="">
+            <div class="clients-img-size">
+              <img class="img-fluid"   src="assets/img/Clients/moncloa@1x.png"
+              srcset="assets/img/Clients/moncloa@2x.png 2x, 
+                      assets/img/Clients/moncloa@1x.png 1x" 
+              alt="">
+            </div>
           </div>
           <div class="clients-img">
-            <img class="img-fluid"   src="assets/img/Clients/diariofinanciero@1x.png"
-            srcset="assets/img/Clients/diariofinanciero@2x.png 2x, 
-                    assets/img/Clients/diariofinanciero@1x.png 1x" 
-            alt="">
+            <div class="clients-img-size">
+              <img class="img-fluid"   src="assets/img/Clients/diariofinanciero@1x.png"
+              srcset="assets/img/Clients/diariofinanciero@2x.png 2x, 
+                      assets/img/Clients/diariofinanciero@1x.png 1x" 
+              alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -117,7 +129,7 @@
 
     <!-- Section CTA -->
     <section class="main-cta bg-lightgray section-spacing">
-      <h2 class="main-title text-sm-center text-start">
+      <h2 class="main-title text-center">
         Esto es para ti si:
       </h1>
       <div class="main-grid grid-3 section-spacing-top">
@@ -132,17 +144,17 @@
         </div>
       </div>
 
-      <div class="main-buttons d-flex justify-content-center section-spacing-top">
+      <div class="main-buttons d-flex justify-content-center flex-column flex-sm-row section-spacing-top">
         <a href="#" class="btn-custom btn-flex">Solicitar información</a>
         <a href="#" class="btn-custom outline btn-icon btn-flex">
-          <img class="img-fluid" src="assets/img/icons/u_whatsapp-alt.svg" alt="">
+          <img src="assets/img/icons/u_whatsapp-alt.svg" alt="">
           Whatsapp
         </a>
       </div>
     </section>
 
     <section class="main-benefits section-spacing bg-img bg-img-center"  style="background-image: url(assets/img/lines/fondo-lineas-gris.svg);">
-      <h2 class="main-title text-sm-center text-start">
+      <h2 class="main-title text-center">
         Con Setroi ganarás para siempre
       </h2>
       <div class="main-grid grid-4 section-spacing-top">
@@ -179,7 +191,7 @@
     <!-- Section WHY -->
     <section class="main-why bg-lightgray section-spacing">
       <div class="container horizontal-padding">
-        <h2 class="main-title text-sm-center text-start">
+        <h2 class="main-title text-center">
           ¿Porque invertir en posicionamiento y reputación?
         </h2>
         <div class="main-grid grid-2 vertical-padding horizontal-padding">
@@ -200,10 +212,10 @@
         
         </div>
   
-        <div class="main-buttons d-flex justify-content-center">
+        <div class="main-buttons d-flex justify-content-center flex-column flex-sm-row">
           <a href="#" class="btn-custom btn-flex">Solicitar información</a>
           <a href="#" class="btn-custom outline btn-icon btn-flex">
-            <img class="img-fluid" src="assets/img/icons/u_whatsapp-alt.svg" alt="">
+            <img src="assets/img/icons/u_whatsapp-alt.svg" alt="">
             Whatsapp
           </a>
         </div>
@@ -217,17 +229,20 @@
         <div class="result-info d-flex justify-content-center flex-column">
           <h2 class="main-title mb-4">Cambia los resultados y aparece en las primeras posiciones</h2>
           <p>Reprehenderit esse labore id veniam ut veniam non ex adipisicing amet ullamco dolor proident. Exercitation velit ea incididunt sit qui do ipsum fugiat laboris minim nostrud dolor</p>
-          <div class="main-buttons d-flex mt-4 ">
+          <div class="main-buttons d-flex flex-sm-row flex-lg-row flex-md-column flex-column mt-4 ">
             <a href="#" class="btn-custom btn-flex">Solicitar información</a>
             <a href="#" class="btn-custom outline btn-icon btn-flex">
-              <img class="img-fluid" src="assets/img/icons/u_whatsapp-alt.svg" alt="">
+              <img src="assets/img/icons/u_whatsapp-alt.svg" alt="">
               Whatsapp
             </a>
           </div>
         </div>
         <div class="result-img d-flex justify-content-center">
           <div class="result-img-content">
-            <img class="img-fluid" src="assets/img/SETROI_posicionamiento.png" alt="">
+            <img class="img-fluid" src="assets/img/posicionamiento@1x.png"
+            srcset="assets/img/posicionamiento@2x.png 2x, 
+                    assets/img/posicionamiento@1x.png 1x" 
+            alt="">
           </div>
         </div>
       </div>
@@ -235,17 +250,20 @@
         <div class="result-info d-flex justify-content-center flex-column">
           <h2 class="main-title mb-4">Periódicos digitales hablarán de tu negocio siendo noticia</h2>
           <p>Reprehenderit esse labore id veniam ut veniam non ex adipisicing amet ullamco dolor proident. Exercitation velit ea incididunt sit qui do ipsum fugiat laboris minim nostrud dolor</p>
-          <div class="main-buttons d-flex mt-4 ">
+          <div class="main-buttons d-flex flex-sm-row flex-lg-row flex-md-column flex-column mt-4 ">
             <a href="#" class="btn-custom btn-flex">Solicitar información</a>
             <a href="#" class="btn-custom outline btn-icon btn-flex">
-              <img class="img-fluid" src="assets/img/icons/u_whatsapp-alt.svg" alt="">
+              <img src="assets/img/icons/u_whatsapp-alt.svg" alt="">
               Whatsapp
             </a>
           </div>
         </div>
         <div class="result-img d-flex justify-content-center">
           <div class="result-img-content">
-            <img class="img-fluid" src="assets/img/SETROI_Noticias.png" alt="">
+            <img class="img-fluid" src="assets/img/noticias@1x.png"
+            srcset="assets/img/noticias@2x.png 2x, 
+                    assets/img/noticias@1x.png 1x" 
+            alt="">
           </div>
         </div>
       </div>
@@ -254,7 +272,7 @@
      <!-- Section METHODS -->
      <section class="main-methods bg-lightgray section-spacing">
       <div class="container horizontal-padding">
-        <h2 class="main-title text-sm-center text-start">
+        <h2 class="main-title text-center">
           El método que siempre han usado las grandes empresas para posicionar ahora disponible para tu negocio
         </h2>
         <div class="main-grid grid-3 horizontal-padding">
@@ -267,14 +285,14 @@
           <div class="custom-card bg-trasparent text-center">
             <div class="custom-card-count mb-3">
               <span>1000</span>
-              <img class="img-rotate" src="assets/img/Sparkle.svg" alt="">
+              <img class="img-rotate" src="assets/img/icons/Sparkle.svg" alt="">
             </div>
             <p> <strong>Más de 1000 clientes </strong>  ya confian en SETROI para posicionar.</p>
           </div>
           <div class="custom-card bg-trasparent text-center">
             <div class="custom-card-count mb-3">
               <span>4,9</span>
-              <img src="assets/img/Frame.svg" alt="">
+              <img src="assets/img/icons/Frame.svg" alt="">
             </div>
             <p> <strong>Puntuación media</strong> sugerida por nuestrosclientes</p>
           </div>
@@ -285,24 +303,24 @@
 
    <!-- Section SUCCESS -->
     <section class="main-success section-spacing">
-      <h2 class="main-title text-sm-center text-start mb-4 ">
+      <h2 class="main-title text-center mb-4 ">
         Recomendaciones
       </h2>
       <div class="main-grid grid-2">
         <div class="custom-video">
-          <video src="assets/img/test.mp4"  poster="assets/img/SETROI_min_planifica_o_.jpeg">
+          <video class="main-video" src="assets/img/Recommendations/test.mp4"  poster="assets/img/Recommendations/SETROI_min_planifica_o_.jpeg">
           </video>
         </div>
         <div class="custom-video">
-          <video src="assets/img/test.mp4"  poster="assets/img/SETROI_min_fecosauto_o_.jpeg">
+          <video class="main-video" src="assets/img/Recommendations/test.mp4"  poster="assets/img/Recommendations/SETROI_min_fecosauto_o_.jpeg">
           </video>
         </div>
       </div>
 
-      <div class="main-buttons d-flex justify-content-center ">
+      <div class="main-buttons d-flex justify-content-center flex-column flex-sm-row ">
         <a href="#" class="btn-custom btn-flex">Solicitar información</a>
         <a href="#" class="btn-custom outline btn-icon btn-flex">
-          <img class="img-fluid" src="assets/img/icons/u_whatsapp-alt.svg" alt="">
+          <img src="assets/img/icons/u_whatsapp-alt.svg" alt="">
           Whatsapp
         </a>
       </div>
@@ -333,7 +351,10 @@
           </div>
           <div class="result-img d-flex justify-content-center">
             <div class="result-img-content">
-              <img class="img-fluid" src="assets/img/SETROI_ZonaCliente 1.png" alt="">
+              <img class="img-fluid" src="assets/img/ZonaCliente@1x.png"
+              srcset="assets/img/ZonaCliente@2x.png 2x, 
+                      assets/img/ZonaCliente@1x.png 1x" 
+              alt="">
             </div>
           </div>
         </div>
@@ -342,7 +363,7 @@
 
     <!-- Section ABOUT -->
     <section class="main-about bg-lightgray section-spacing">
-      <h2 class="main-title text-sm-center text-start mb-4">
+      <h2 class="main-title text-center mb-4">
         Somos SETROI
       </h2>
       <div class="main-grid grid-3 mb-4">
@@ -367,38 +388,41 @@
       </div>
 
       <!-- section clientes -->
-      <div class="clients-grid pt-4">
-        <div class="clients-info">
-          <h2 class="main-title main-title-small">
-            Más de 100 periódicos digitales
-          </h2>
-        </div>
-        <div class="clients-imgs">
-          <div class="clients-img">
+      <div class="clients-imgs pt-4">
+        <div class="clients-img">
+          <div class="clients-img-size">
             <img class="img-fluid" src="assets/img/Clients/que@1x.png" 
             srcset="assets/img/Clients/que@2x.png 2x, 
                     assets/img/Clients/que@1x.png 1x" 
             alt="">
           </div>
-          <div class="clients-img">
+        </div>
+        <div class="clients-img">
+          <div class="clients-img-size">
             <img class="img-fluid" src="assets/img/Clients/elmundofinanciero@1x.png" 
             srcset="assets/img/Clients/elmundofinanciero@2x.png 2x, 
                     assets/img/Clients/elmundofinanciero@1x.png 1x" 
             alt="">
           </div>
-          <div class="clients-img">
+        </div>
+        <div class="clients-img">
+          <div class="clients-img-size">
             <img class="img-fluid" src="assets/img/Clients/ecd-1@1x.png" 
             srcset="assets/img/Clients/ecd-1@2x.png 2x, 
                     assets/img/Clients/ecd-1@1x.png 1x" 
             alt="">
           </div>
-          <div class="clients-img">
+        </div>
+        <div class="clients-img">
+          <div class="clients-img-size">
             <img class="img-fluid"   src="assets/img/Clients/moncloa@1x.png"
             srcset="assets/img/Clients/moncloa@2x.png 2x, 
                     assets/img/Clients/moncloa@1x.png 1x" 
             alt="">
           </div>
-          <div class="clients-img">
+        </div>
+        <div class="clients-img">
+          <div class="clients-img-size">
             <img class="img-fluid"   src="assets/img/Clients/diariofinanciero@1x.png"
             srcset="assets/img/Clients/diariofinanciero@2x.png 2x, 
                     assets/img/Clients/diariofinanciero@1x.png 1x" 

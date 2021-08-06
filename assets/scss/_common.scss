@@ -94,13 +94,6 @@ body {
   transition: all ease-in-out 0.3s;
   text-decoration: none;
 
-  @include respond-to(xs){
-    font-size: 13px;
-  }
-  @include respond-to(sm){
-    font-size: 13px;
-  }
-
   &[type="submit"] {
     border: 0;
     cursor: pointer;
@@ -154,6 +147,13 @@ body {
 
   &.large {
     padding: 10px 24px;
+
+    @include respond-to(xs){
+      padding: 13px 24px;
+    }
+    @include respond-to(sm){
+      padding: 13px 24px;
+    }
   }
 
   &.small {
@@ -166,13 +166,27 @@ body {
 
   &:nth-child(2){
     margin-left: 15px;
+
+    @include respond-to(xs){
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  
   }
 
   &.btn-flex{
     display: flex;
     align-items: center;
+
+    @include respond-to(xs){
+      width: 100%;
+      justify-content: center;
+      height: 50px;
+    }
+   
   }
   &.btn-icon {
+
     &:hover {
       img {
         filter: brightness(0) invert(1);
@@ -246,9 +260,15 @@ body {
 
   @include respond-to(xs){
     font-size: 28px;
+    margin-bottom: 0;
   }
   @include respond-to(sm){
     font-size: 28px;
+    margin-bottom: 0;
+  }
+  @include respond-to(md){
+    font-size: 30px;
+    margin-bottom: 0;
   }
 
   span{
@@ -263,22 +283,35 @@ body {
 .vertical-padding{
   padding-block: 40px;
   @include respond-to(xs){
-    padding-block: 20px;
+    padding-block: 30px;
   }
 
   @include respond-to(sm){
-    padding-block: 20px;
+    padding-block: 30px;
+  }
+
+  @include respond-to(md){
+    padding-block: 30px;
   }
 }
 
 .horizontal-padding{
   padding-inline: 40px;
+  
   @include respond-to(xs){
     padding-inline: 0px;
   }
 
   @include respond-to(sm){
     padding-inline: 0px;
+  }
+
+  @include respond-to(md){
+    padding-inline: 30px;
+  }
+
+  @include respond-to(lg){
+    padding-inline: 30px;
   }
 }
 .section-spacing {
@@ -290,6 +323,12 @@ body {
   }
   @include respond-to(sm){
     padding: 50px 30px;
+  }
+  @include respond-to(md){
+    padding: 40px 30px;
+  }
+  @include respond-to(lg){
+    padding: 50px 70px;
   }
 }
 
@@ -337,14 +376,13 @@ body {
   &-img{
     a {
       width: 130px;
-    
     }
   }
 }
 .bg-img{
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 30% 35%;
+  background-position: 60% 44%;
 
   &.bg-img-center {
     background-position: center;
@@ -362,6 +400,10 @@ input[type='email']{
   border-radius: $radius;
   padding: 12px;
   margin-bottom: 10px;
+
+  @include respond-to(md){
+    padding: 12px;
+  }
 
   &:focus{
     border-color:$secondary;
@@ -389,6 +431,17 @@ input[type='email']{
 .main-grid{
   display: grid;
   grid-gap: 20px;
+  @include respond-to(xs){
+     grid-gap: 10px;
+  }
+
+  @include respond-to(sm){
+     grid-gap: 10px;
+  }
+
+  @include respond-to(md){
+    grid-gap: 10px;
+ }
 
 
   &.grid-2{
@@ -421,7 +474,7 @@ input[type='email']{
     }
   
     @include respond-to(sm){
-      grid-template-columns: 100%;
+      grid-template-columns: repeat(2,1fr);
     }
   } 
   &.grid-reverse {
