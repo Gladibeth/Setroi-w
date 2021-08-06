@@ -126,7 +126,7 @@
   }
 
   @include respond-to(sm){
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(2,1fr);
     margin-top: 30px;
   }
   @include respond-to(md){
@@ -164,7 +164,7 @@
         width: 280px;
       }
       @include respond-to(sm){
-        width: 280px;
+        width: 260px;
       }
       @include respond-to(md){
         width: 310px;
@@ -177,6 +177,7 @@
 .main-cta{
   .custom-card {
     padding: 30px;
+    width: 90%;
 
     p{
       margin-bottom: 0;
@@ -184,6 +185,30 @@
     }
   }
 }
+.cta-slider{
+
+  .slick-dots{
+    bottom: -40px;
+    li{
+      opacity: 0.5;
+      @include size(15px,15px);
+
+      &.slick-active{
+        opacity: 1;
+      }
+      button{
+        @include size(15px,15px);
+        background-color: $gray;
+        border-radius: 50%;
+        &:before{
+          @include size(15px,15px);
+          content: '';
+        }
+      }
+    }
+  }
+}
+
 
 .main-benefits{
   .custom-card {

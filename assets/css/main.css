@@ -607,7 +607,7 @@ input[type=email]:focus {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .clients-imgs {
-    grid-template-columns: 100%;
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 30px;
   }
 }
@@ -664,7 +664,7 @@ input[type=email]:focus {
 }
 @media (min-width: 576px) and (max-width: 767px) {
   .clients-imgs .clients-img-size {
-    width: 280px;
+    width: 260px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -675,10 +675,34 @@ input[type=email]:focus {
 
 .main-cta .custom-card {
   padding: 30px;
+  width: 90%;
 }
 .main-cta .custom-card p {
   margin-bottom: 0;
   font-weight: 800;
+}
+
+.cta-slider .slick-dots {
+  bottom: -40px;
+}
+.cta-slider .slick-dots li {
+  opacity: 0.5;
+  width: 15px;
+  height: 15px;
+}
+.cta-slider .slick-dots li.slick-active {
+  opacity: 1;
+}
+.cta-slider .slick-dots li button {
+  width: 15px;
+  height: 15px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+}
+.cta-slider .slick-dots li button:before {
+  width: 15px;
+  height: 15px;
+  content: "";
 }
 
 .main-benefits .custom-card {
