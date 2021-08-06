@@ -150,6 +150,8 @@ body {
 
     @include respond-to(xs){
       padding: 13px 24px;
+      display: flex;
+      justify-content: center;
     }
     @include respond-to(sm){
       padding: 13px 24px;
@@ -171,7 +173,6 @@ body {
       margin-left: 0;
       margin-top: 15px;
     }
-  
   }
 
   &.btn-flex{
@@ -185,6 +186,7 @@ body {
     }
    
   }
+  
   &.btn-icon {
 
     &:hover {
@@ -224,6 +226,7 @@ body {
   &-outlined {
     font-family: 'Material Icons Outlined';
   }
+
   &.md-dark { 
     color: rgba(0, 0, 0, 0.54); 
 
@@ -231,6 +234,7 @@ body {
       color: rgba(0, 0, 0, 0.26);
     }
   }
+
   &.md-light { 
     color: rgba(0, 0, 0, 0.54); 
 
@@ -242,12 +246,15 @@ body {
   &.md-18 { 
     font-size: 18px; 
   }
+
   &.md-24 { 
     font-size: 24px; 
   }
+
   &.md-36 { 
     font-size: 36px; 
   }
+
   &.md-48 { 
     font-size: 48px; 
   }
@@ -259,13 +266,15 @@ body {
   font-weight:$extrabold;
 
   @include respond-to(xs){
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 0;
   }
+
   @include respond-to(sm){
     font-size: 28px;
     margin-bottom: 0;
   }
+
   @include respond-to(md){
     font-size: 30px;
     margin-bottom: 0;
@@ -314,6 +323,7 @@ body {
     padding-inline: 30px;
   }
 }
+
 .section-spacing {
   padding: 60px 100px;
   position: relative;
@@ -321,12 +331,15 @@ body {
   @include respond-to(xs){
     padding: 50px 30px;
   }
+
   @include respond-to(sm){
     padding: 50px 30px;
   }
+
   @include respond-to(md){
     padding: 40px 30px;
   }
+
   @include respond-to(lg){
     padding: 50px 70px;
   }
@@ -336,7 +349,6 @@ body {
   padding-top: 40px;
 }
 
-
 .custom-card {
   background-color: $white;
   border-radius: 10px;
@@ -344,7 +356,6 @@ body {
   &.bg-trasparent{
     background-color: transparent;
   }
-  
 
   h4 {
     font-size: 19px;
@@ -379,6 +390,7 @@ body {
     }
   }
 }
+
 .bg-img{
   background-repeat: no-repeat;
   background-size: cover;
@@ -388,6 +400,7 @@ body {
     background-position: center;
   }
 }
+
 [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
   border: none;
 }
@@ -401,8 +414,12 @@ input[type='email']{
   padding: 12px;
   margin-bottom: 10px;
 
-  @include respond-to(md){
-    padding: 12px;
+  @include respond-to(xs){
+    padding: 10px;
+  }
+
+  @include respond-to(sm){
+    padding: 10px;
   }
 
   &:focus{
@@ -466,6 +483,7 @@ input[type='email']{
       grid-template-columns: 100%;
     }
   } 
+
   &.grid-4{
     grid-template-columns: repeat(4,1fr);
 
@@ -477,6 +495,7 @@ input[type='email']{
       grid-template-columns: repeat(2,1fr);
     }
   } 
+
   &.grid-reverse {
     direction: rtl;
     div{

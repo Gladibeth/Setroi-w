@@ -39,7 +39,7 @@ $('.cta-slider-js').slick({
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '30px',
+        centerPadding: '20px',
         slidesToShow: 1
       }
     }
