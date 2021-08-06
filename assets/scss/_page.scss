@@ -22,7 +22,20 @@
     color: $secondary;
   }
 }
+.info-logo{
+  padding-block: 40px;
+  @include respond-to(xs){
+    padding-block: 30px;
+  }
 
+  @include respond-to(sm){
+    padding-block: 30px;
+  }
+
+  @include respond-to(md){
+    padding-block: 30px;
+  }
+}
 .info-content{
   width: 100%;
 }
@@ -284,10 +297,7 @@
         justify-content: center;
         height: 45px;
 
-        &:nth-child(2){
-          margin-left: 0;
-          margin-top: 15px;
-        }
+      
       }
     }
   }
