@@ -1,0 +1,433 @@
+@import "variables";
+@import "mixins";
+
+body {
+  font-family: $font;
+}
+
+// Fonts
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-Regular/Gilroy-Regular.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-Regular/Gilroy-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-Medium/Gilroy-Medium.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-Medium/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-Light/Gilroy-Light.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-Light/Gilroy-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-ExtraBold/Gilroy-ExtraBold.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-ExtraBold/Gilroy-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../font/Gilroy/Gilroy-Bold/Gilroy-Bold.woff2') format('woff2'),
+      url('../font/Gilroy/Gilroy-Bold/Gilroy-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+// Fontface icons
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/MaterialIcons/Material-Icons.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/MaterialIcons/Material-Icons-Outlined.woff2) format('woff2');
+}
+
+.main-global {
+  overflow: hidden;
+  background-color: white;
+  max-width: 1600px;
+  margin: auto;
+}
+
+/* Buttons */
+.btn-custom {
+  background-color: $primary;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: $radius;
+  color: $secondary;
+  font-weight: $bold;
+  padding: 5px 24px;
+  // box-shadow: 0px 8px 10px 0px rgba($primary, 0.3);
+  transition: all ease-in-out 0.3s;
+  text-decoration: none;
+
+  @include respond-to(xs){
+    font-size: 13px;
+  }
+  @include respond-to(sm){
+    font-size: 13px;
+  }
+
+  &[type="submit"] {
+    border: 0;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  &.light-shadow {
+    box-shadow: 0px 12px 31px 0px rgba($primary, 0.25);
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    box-shadow: 0px 8px 10px 0px rgba($secondary, 0.3);
+
+    &.light-shadow {
+      box-shadow: 0px 12px 31px 0px rgba($secondary, 0.25);
+    }
+  }
+
+  &.outline {
+    background-color: $white;
+    border: 1px solid $primary;
+    color: $primary;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+
+  &.outline-secondary {
+    background-color: $white;
+    border: 1px solid $secondary;
+    color: $secondary;
+
+    &:hover {
+      background-color: $secondary;
+      color: $white;
+      transition: all ease-in-out 0.3s;
+    }
+  }
+
+  &.extralarge {
+    padding: 20px 30px;
+  }
+
+  &.large {
+    padding: 10px 24px;
+  }
+
+  &.small {
+    font-size: 13px;
+  }
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+
+  &:nth-child(2){
+    margin-left: 15px;
+  }
+
+  &.btn-flex{
+    display: flex;
+    align-items: center;
+  }
+  &.btn-icon {
+    &:hover {
+      img {
+        filter: brightness(0) invert(1);
+        transition: all ease-in-out 0.3s;
+      }
+    }
+  }
+}
+
+/* Icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+
+  &-outlined {
+    font-family: 'Material Icons Outlined';
+  }
+  &.md-dark { 
+    color: rgba(0, 0, 0, 0.54); 
+
+    &.md-inactive{
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+  &.md-light { 
+    color: rgba(0, 0, 0, 0.54); 
+
+    &.md-inactive{
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &.md-18 { 
+    font-size: 18px; 
+  }
+  &.md-24 { 
+    font-size: 24px; 
+  }
+  &.md-36 { 
+    font-size: 36px; 
+  }
+  &.md-48 { 
+    font-size: 48px; 
+  }
+}
+
+.main-title {
+  color: $secondary;
+  font-size: 35px;
+  font-weight:$extrabold;
+
+  @include respond-to(xs){
+    font-size: 28px;
+  }
+  @include respond-to(sm){
+    font-size: 28px;
+  }
+
+  span{
+    color: $primary;
+  }
+
+  &-small{
+    font-size: 19px;
+  }
+}
+
+.vertical-padding{
+  padding-block: 40px;
+  @include respond-to(xs){
+    padding-block: 20px;
+  }
+
+  @include respond-to(sm){
+    padding-block: 20px;
+  }
+}
+
+.horizontal-padding{
+  padding-inline: 40px;
+  @include respond-to(xs){
+    padding-inline: 0px;
+  }
+
+  @include respond-to(sm){
+    padding-inline: 0px;
+  }
+}
+.section-spacing {
+  padding: 60px 100px;
+  position: relative;
+
+  @include respond-to(xs){
+    padding: 50px 30px;
+  }
+  @include respond-to(sm){
+    padding: 50px 30px;
+  }
+}
+
+.section-spacing-top {
+  padding-top: 40px;
+}
+
+
+.custom-card {
+  background-color: $white;
+  border-radius: 10px;
+
+  &.bg-trasparent{
+    background-color: transparent;
+  }
+  
+
+  h4 {
+    font-size: 19px;
+    color: $black;
+    font-weight: $bold;
+  }
+
+  p {
+    color: $secondary;
+    
+  }
+}
+
+.custom-video {
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+
+  video {
+    position: relative;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.main-buttons {
+  &-img{
+    a {
+      width: 130px;
+    
+    }
+  }
+}
+.bg-img{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 30% 35%;
+
+  &.bg-img-center {
+    background-position: center;
+  }
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled){
+  border: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email']{
+  border: 3px solid $grayBorder;
+  color: $secondary;
+  border-radius: $radius;
+  padding: 12px;
+  margin-bottom: 10px;
+
+  &:focus{
+    border-color:$secondary;
+    box-shadow: none;
+  }
+}
+
+.form-check{
+  margin: 10px 0;
+  strong {
+    a{
+      color: $primary;
+    }
+  }
+}
+
+.img-fluid{
+  width: 100%;
+}
+
+.bg-lightgray{
+  background-color: $lightgray;
+}
+
+.main-grid{
+  display: grid;
+  grid-gap: 20px;
+
+
+  &.grid-2{
+    grid-template-columns: repeat(2,1fr);
+    @include respond-to(xs){
+      grid-template-columns: 100%;
+    }
+  
+    @include respond-to(sm){
+      grid-template-columns: 100%;
+    }
+  } 
+
+  &.grid-3{
+    grid-template-columns: repeat(3,1fr);
+
+    @include respond-to(xs){
+      grid-template-columns: 100%;
+    }
+  
+    @include respond-to(sm){
+      grid-template-columns: 100%;
+    }
+  } 
+  &.grid-4{
+    grid-template-columns: repeat(4,1fr);
+
+    @include respond-to(xs){
+      grid-template-columns: 100%;
+    }
+  
+    @include respond-to(sm){
+      grid-template-columns: 100%;
+    }
+  } 
+  &.grid-reverse {
+    direction: rtl;
+    div{
+      direction: ltr;
+    }
+  }
+}
