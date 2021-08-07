@@ -129,76 +129,43 @@
   
 }
 
-.clients-imgs{
-  display: grid;
-  grid-template-columns: repeat(5,1fr);
 
-  @include respond-to(xs){
-    grid-template-columns: 100%;
-    margin-top: 30px;
-  }
-
-  @include respond-to(sm){
-    grid-template-columns: repeat(2,1fr);
-    margin-top: 30px;
-  }
-  @include respond-to(md){
-    grid-template-columns: repeat(2,1fr);
-    margin-top: 50px;
-  }
-
-  @include respond-to(lg){
-    grid-template-columns: repeat(3,1fr);
-  }
-
-  .clients-img{
-
-    @include respond-to(xs){
-      @include flexcenter();
-      margin-bottom: 20px;
-    }
-    @include respond-to(sm){
-      @include flexcenter();
-      margin-bottom: 20px;
-    }
-    @include respond-to(md){
-      @include flexcenter();
-      margin-bottom: 20px;
-    }
-    @include respond-to(lg){
-      @include flexcenter();
-      margin-bottom: 20px;
-    }
-
-    &-size {
-      width: 200px;
-
-      @include respond-to(xs){
-        width: 280px;
-      }
-      @include respond-to(sm){
-        width: 260px;
-      }
-      @include respond-to(md){
-        width: 310px;
-      }
-    }
+.clients-img{
+  .clients-img-size{
+    padding: 20px;
   }
 }
-
-
 .main-cta{
+
+  @include respond-to(xs) {
+    padding: 50px 0 50px 30px;
+  }
   .custom-card {
     padding: 30px;
     width: 90%;
+    min-height: 120px;
+    @include truncate(120px, 3);
+
+    @include respond-to(xs){
+      padding: 20px;
+      min-height: 150px;
+      @include truncate(150px, 5);
+      width: 85%;
+    }
 
     p{
       margin-bottom: 0;
       font-weight: $bold;
     }
+
+  }
+  .main-buttons{
+    @include respond-to(xs){
+      padding-right: 30px;
+    }
   }
 }
-.cta-slider{
+.main-slider{
 
   .slick-dots{
     bottom: -40px;
@@ -331,14 +298,14 @@
         font-weight: $extrabold;
 
       }
-      .img-rotate{
-       transform: rotate(90deg);
-       position: absolute;
-       right: 25%;
+    }
 
-       @include respond-to(md){
-         right: 6%;
-       }
+    &:nth-child(2){
+      .custom-card-count{
+        align-items: flex-start;
+        img{
+          margin-left: -1.4rem;
+        }
       }
     }
   }
@@ -353,7 +320,7 @@
   @include size(460px,480px);
 
   @include respond-to(xs){
-    @include size(315px,330px);
+    @include size(330px,355px);
     margin-top: 30px;
   }
 
@@ -370,9 +337,7 @@
     height: 100%;
     object-fit: contain;
 
-    @include respond-to(xs){
-      object-fit: initial;
-    }
+  
     @include respond-to(sm){
       object-fit: initial;
     }
@@ -393,19 +358,30 @@
   }
 }
 // ABOUT
-.main-about{
+.main-testimonials{
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
   .custom-card {
     padding: 20px;
 
     &-img{
-      width: 60px;
+      width: 90px;
     }
 
     p{
       font-size: 13px;
       
+    }
+  }
+
+  .clients-grid{
+    padding-top: 30px;
+
+
+    .clients-info{
+      @include respond-to(md){
+        margin-bottom: 30px;
+      }
     }
   }
 }

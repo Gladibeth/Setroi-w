@@ -387,6 +387,11 @@ body {
   &-img{
     a {
       width: 130px;
+      height: 42px;
+
+      img{
+        height: 100%;
+      }
     }
   }
 }
