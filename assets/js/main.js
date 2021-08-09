@@ -1,5 +1,22 @@
 
 
+function webP() { 
+  var ua = navigator.userAgent.toLowerCase(); 
+  if (ua.indexOf('safari') != -1) { 
+    if (ua.indexOf('chrome') > -1) {
+      console.log("1") // Chrome
+    } else {
+      $('img[src$=".webp"]').each(function(index,element) {
+        element.src = element.src.replace('.webp','.png');
+      });
+      $('img[srcset$=".webp"]').each(function(index,element) {
+        element.src = element.src.replace('.webp','.png');
+      });
+    }
+  }
+}
+
+webP();
 
 // video controls
 $('.main-video').hover(function toggleControls() {
@@ -94,7 +111,7 @@ $('.clients-slider-js').slick({
       settings: {
         dots: true,
         arrows: false,
-        slidesToShow: 3
+        slidesToShow: 4
       }
     },
     {
@@ -102,7 +119,7 @@ $('.clients-slider-js').slick({
       settings: {
         dots: true,
         arrows: false,
-        slidesToShow: 2
+        slidesToShow: 3
       }
     },
     {
@@ -110,7 +127,7 @@ $('.clients-slider-js').slick({
       settings: {
         dots: true,
         arrows: false,
-        slidesToShow: 1
+        slidesToShow: 2
       }
     }
   ]
