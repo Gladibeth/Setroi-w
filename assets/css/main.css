@@ -506,10 +506,10 @@ input[type=email]:focus {
   direction: ltr;
 }
 
-.timeline {
+.main-timeline {
   position: relative;
 }
-.timeline::before {
+.main-timeline::before {
   position: absolute;
   content: "";
   width: 78%;
@@ -520,17 +520,17 @@ input[type=email]:focus {
   transform: translateX(-50%);
 }
 @media (min-width: 0px) and (max-width: 575px) {
-  .timeline::before {
+  .main-timeline::before {
     background-color: transparent;
   }
 }
 @media (min-width: 576px) and (max-width: 767px) {
-  .timeline::before {
+  .main-timeline::before {
     background-color: transparent;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  .timeline::before {
+  .main-timeline::before {
     top: 25%;
   }
 }
