@@ -488,6 +488,21 @@ input[type='email']{
   background-color: $lightgray;
 }
 
+.bg-gradients{
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background-image: linear-gradient(190deg,#1bdb75 0%,#f7f7f7 100%);
+    opacity: .04;
+    transition: background .3s,border-radius .3s,opacity .3s;
+    }
+    
+    
+}
+
+
 .main-grid{
   display: grid;
   grid-gap: 20px;

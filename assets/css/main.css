@@ -441,6 +441,18 @@ input[type=email]:focus {
   background-color: #f7f7f7;
 }
 
+.bg-gradients {
+  position: relative;
+}
+.bg-gradients::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: linear-gradient(190deg, #1bdb75 0%, #f7f7f7 100%);
+  opacity: 0.04;
+  transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+}
+
 .main-grid {
   display: grid;
   grid-gap: 20px;
