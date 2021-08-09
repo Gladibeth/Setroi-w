@@ -589,6 +589,10 @@ input[type='email']{
 
   &.list-metrics{
     padding-left: 3rem;
+
+    @include respond-to(xs){
+      padding-left: 1rem;
+    }
     li {
       list-style: none;
       &:before{

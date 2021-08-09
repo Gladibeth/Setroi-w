@@ -1,5 +1,4 @@
-
-
+// change of images
 function webP() { 
   var ua = navigator.userAgent.toLowerCase(); 
   if (ua.indexOf('safari') != -1) { 
@@ -15,7 +14,6 @@ function webP() {
     }
   }
 }
-
 webP();
 
 // video controls
@@ -27,7 +25,7 @@ $('.main-video').hover(function toggleControls() {
   }
 })
 
-
+// Sliders
 $('.cta-slider-js').slick({
   dots: true,
   infinite: true,
@@ -97,8 +95,6 @@ $('.testimonials-slider-js').slick({
     }
   ]
 });
-
-
 
 $('.clients-slider-js').slick({
   dots: false,

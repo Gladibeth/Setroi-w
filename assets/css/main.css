@@ -547,6 +547,11 @@ input[type=email]:focus {
 .main-list.list-metrics {
   padding-left: 3rem;
 }
+@media (min-width: 0px) and (max-width: 575px) {
+  .main-list.list-metrics {
+    padding-left: 1rem;
+  }
+}
 .main-list.list-metrics li {
   list-style: none;
 }
